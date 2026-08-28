@@ -1,0 +1,9 @@
+.vscode
+.DS_Store
+./ex00
+*.out
+*.swp
+vgcore.*
+claptrap
+*.o
+*.a
