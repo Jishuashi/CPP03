@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/28 10:41:16 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/28 16:20:18 by hchartie         ###   ########.fr       */
+/*   Created: 2026/08/28 15:50:39 by hchartie          #+#    #+#             */
+/*   Updated: 2026/08/28 16:50:55 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
-# include <iostream>
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+# include "ClapTrap.hpp"
 
-class ClapTrap
+class ScavTrap : public ClapTrap
 {
 private:
-	std::string _name;
-	int			_life;
-	int			_energy;
-	int			_attack;
 public:
-	ClapTrap(std::string	pName);
-	~ClapTrap();
+	ScavTrap(std::string pName);
+	~ScavTrap();
 
-	ClapTrap(const ClapTrap &pToCopy);
-
-	ClapTrap& operator=(const ClapTrap &pOther);
-
-	void attack(const std::string& target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
+	
 };
 
 #endif
