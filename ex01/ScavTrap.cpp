@@ -19,5 +19,39 @@ ScavTrap::ScavTrap(std::string pName) : ClapTrap(pName)
 	_attack = 20;
 }
 
-ScavTrap::~ScavTrap() { }
+ScavTrap::~ScavTrap()
+{
+	std::cout << "ScavTrap " << _name << " deleted" << std::endl;
+}
 
+ScavTrap::ScavTrap(const ScavTrap &pToCopy) : ClapTrap(pToCopy)
+{
+	std::cout << "ScavTrap " << _name << " Created by copy constructor" << std::endl;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &pOther)
+{
+	if (this != &pOther)
+	{
+			_life = pOther._life;
+			_energy = pOther._energy;
+			_attack = pOther._attack;
+	}
+	return (*this);
+}
+
+void ScavTrap::attack(const std::string& target)
+{
+	if (_attack == 0)
+		std::cout << "ScavTrap " << _name << "can't attack" << std::endl;
+	if (_energy == 0)
+		std::cout << "ScavTrap " << _name << "no energy left" << std::endl;
+	if (_life == 0)
+	{
+		std::cout << "ScavTrap " << _name << "is dead" << std::endl;
+		return ;
+	}
+	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing "
+		<< _attack << " points of damage!" << std::endl;
+	_energy--;
+}

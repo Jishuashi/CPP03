@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 15:50:39 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/28 16:50:55 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/29 22:58:42 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ public:
 	ScavTrap(std::string pName);
 	~ScavTrap();
 
-	
+	ScavTrap(const ScavTrap &pToCopy);
+	ScavTrap& operator=(const ScavTrap &pOther);
+
+	void attack(const std::string& target);
 };
 
 #endif
