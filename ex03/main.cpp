@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 10:40:39 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/30 01:29:37 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 01:41:17 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(void)
 	std::cout << "\n-------- Attack --------\n" << std::endl;
 	bot1.attack("BOT2");
 	bot2_copy.attack("BOT1");
+	bot.attack("BOT2");
 	
 	std::cout << std::endl;
 	std::cout << "\n-------- Take Damage --------\n" << std::endl;
