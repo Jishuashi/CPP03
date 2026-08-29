@@ -49,7 +49,7 @@ void ScavTrap::attack(const std::string& target)
 	}
 	if (_energy == 0)
 		std::cout << "ScavTrap " << _name << "no energy left" << std::endl;
-	if (_life == 0)
+	if (_life <= 0)
 	{
 		std::cout << "ScavTrap " << _name << "is dead" << std::endl;
 		return ;
