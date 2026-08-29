@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 10:41:16 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/30 00:24:56 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:43:27 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 class ClapTrap
 {
 private:
-protected:
 	std::string _name;
 	int			_life;
 	int			_energy;
