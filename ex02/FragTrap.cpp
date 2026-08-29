@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 00:04:41 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/30 00:22:16 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:31:50 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ FragTrap::FragTrap(std::string pName) : ClapTrap(pName)
 {
 	std::cout << "FragTrap " << _name << "  Default constructor called" << std::endl;
 	_life = 100;
-	_energy = 50;
-	_attack = 20;
+	_energy = 100;
+	_attack = 30;
 }
 
 FragTrap::~FragTrap()
@@ -60,4 +60,14 @@ void FragTrap::attack(const std::string& target)
 	std::cout << "FragTrap " << _name << " attacks " << target << ", causing "
 		<< _attack << " points of damage!" << std::endl;
 	_energy--;
+}
+
+void FragTrap::highFivesGuys(void)
+{
+	if (_life <= 0)
+	{
+		std::cout << "FragTrap " << _name << " is dead" << std::endl;
+		return ;
+	}
+	std::cout << "FragTrap " << _name << " send high five to all" << std::endl;
 }

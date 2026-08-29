@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 10:40:39 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/30 00:18:02 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:35:42 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,13 @@ int	main(void)
 	bot2_copy.beRepaired(2);
 
 	std::cout << std::endl;
-	std::cout << "\n-------- Gate Mode --------\n" << std::endl;
-	bot1.guardGate();
+	std::cout << "\n-------- High Five --------\n" << std::endl;
+	bot1.highFivesGuys();
+	bot2_copy.highFivesGuys();
 	
 	std::cout << std::endl;
 	std::cout << "\n-------- Run out of energy --------\n" << std::endl;
-	while (i < 50)
+	while (i < 100)
 	{
 		bot1.beRepaired(2);
 		i++;
@@ -64,7 +65,6 @@ int	main(void)
 	}
 	bot2_copy.attack("BOT1");
 	bot2_copy.beRepaired(10);
-	bot2_copy.guardGate();
 	
 	std::cout << std::endl;
 	std::cout << "\n-------- Desctructor --------\n" << std::endl;

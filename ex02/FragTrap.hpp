@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 00:05:04 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/30 00:12:04 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:31:03 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ public:
 	FragTrap& operator=(const FragTrap &pOther);
 
 	void attack(const std::string& target);
+	void highFivesGuys(void);
 };
 
 #endif
