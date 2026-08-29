@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 10:40:39 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/30 00:10:04 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:16:46 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ int	main(void)
 		i++;
 	}
 	i = 0;
-	
+	bot1.attack("BOT2");
+
 	std::cout << std::endl;
 	std::cout << "\n-------- Died --------\n" << std::endl;
 	i = 0;

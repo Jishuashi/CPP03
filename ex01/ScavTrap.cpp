@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 15:50:28 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/30 00:09:37 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:16:22 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,10 @@ void ScavTrap::attack(const std::string& target)
 		return ;
 	}
 	if (_energy == 0)
+	{
 		std::cout << "ScavTrap " << _name << " no energy left" << std::endl;
+		return ;
+	}
 	if (_life <= 0)
 	{
 		std::cout << "ScavTrap " << _name << " is dead" << std::endl;
