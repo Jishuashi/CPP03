@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/28 10:41:16 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/30 00:24:56 by hchartie         ###   ########.fr       */
+/*   Created: 2026/08/30 00:05:04 by hchartie          #+#    #+#             */
+/*   Updated: 2026/08/30 00:12:04 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
-# include <iostream>
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
+# include "ClapTrap.hpp"
 
-class ClapTrap
+class FragTrap : public ClapTrap
 {
 private:
-protected:
-	std::string _name;
-	int			_life;
-	int			_energy;
-	int			_attack;
 public:
-	ClapTrap();
-	ClapTrap(std::string	pName);
-	~ClapTrap();
+	FragTrap(std::string pName);
+	~FragTrap();
 
-	ClapTrap(const ClapTrap &pToCopy);
-
-	ClapTrap& operator=(const ClapTrap &pOther);
+	FragTrap(const FragTrap &pToCopy);
+	FragTrap& operator=(const FragTrap &pOther);
 
 	void attack(const std::string& target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
 };
 
 #endif

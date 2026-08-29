@@ -6,11 +6,13 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 10:41:14 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/30 00:09:44 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:24:49 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap() { }
 
 ClapTrap::ClapTrap(std::string	pName) : _name(pName) 
 {
