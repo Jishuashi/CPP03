@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 10:40:39 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/29 23:56:41 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:10:04 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 	ScavTrap bot1("BOT1");
 	
 	ScavTrap *bot2 = new ScavTrap("BOT2");
-	ScavTrap bot;
+	ScavTrap bot("NoName");
 	ScavTrap bot2_copy(*bot2);
 	
 	bot = bot1;

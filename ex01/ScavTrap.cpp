@@ -1,4 +1,3 @@
-#include "ScavTrap.hpp"
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -7,14 +6,11 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 15:50:28 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/28 15:50:29 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:09:37 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-ScavTrap::ScavTrap()
-{
-	std::cout << "ScavTrap <NoName> Default constructor called" << std::endl;
-}
+#include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(std::string pName) : ClapTrap(pName)
 {

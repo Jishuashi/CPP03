@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 10:40:39 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/29 23:51:33 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:09:04 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 	ClapTrap bot1("BOT1");
 	
 	ClapTrap *bot2 = new ClapTrap("BOT2");
-	ClapTrap bot;
+	ClapTrap bot("NoName");
 	ClapTrap bot2_copy(*bot2);
 	
 	bot = bot1;

@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 10:41:16 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/29 22:37:50 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/30 00:08:53 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ private:
 	int			_attack;
 public:
 	ClapTrap(std::string	pName);
-	ClapTrap();
 	~ClapTrap();
 
 	ClapTrap(const ClapTrap &pToCopy);
