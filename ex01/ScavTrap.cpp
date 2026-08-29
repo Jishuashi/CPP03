@@ -43,7 +43,10 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &pOther)
 void ScavTrap::attack(const std::string& target)
 {
 	if (_attack == 0)
-		std::cout << "ScavTrap " << _name << "can't attack" << std::endl;
+	{
+		std::cout << "ScavTrap " << _name << " can't attack" << std::endl;
+		return ;
+	}
 	if (_energy == 0)
 		std::cout << "ScavTrap " << _name << "no energy left" << std::endl;
 	if (_life == 0)
