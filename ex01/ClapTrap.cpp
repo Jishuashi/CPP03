@@ -6,17 +6,20 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 10:41:14 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/29 23:16:35 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/29 23:59:21 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() { }
+ClapTrap::ClapTrap() 
+{
+	std::cout << "ClapTrap <NoName> Default constructor called" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string	pName) : _name(pName) 
 {
-	std::cout << "ClapTrap " << _name << " Created by default constructor" << std::endl;
+	std::cout << "ClapTrap " << _name << " Default constructor called" << std::endl;
 	_life = 10;
 	_energy = 10;
 	_attack = 0;
@@ -30,7 +33,7 @@ ClapTrap::~ClapTrap()
 ClapTrap::ClapTrap(const ClapTrap &pToCopy)
 {
 	_name = pToCopy._name;
-	std::cout << "ClapTrap " << _name << " Created by copy constructor" << std::endl;
+	std::cout << "ClapTrap " << _name << " Copy constructor called" << std::endl;
 	_life = pToCopy._life;
 	_energy = pToCopy._energy;
 	_attack = pToCopy._attack;
@@ -40,15 +43,22 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &pOther)
 {
 	if (this != &pOther)
 	{
-			_life = pOther._life;
-			_energy = pOther._energy;
-			_attack = pOther._attack;
+		_name = pOther._name;
+		std::cout << "ClapTrap " << pOther._name << " assignment operator called" << std::endl;
+		_life = pOther._life;
+		_energy = pOther._energy;
+		_attack = pOther._attack;
 	}
 	return (*this);
 }
 
 void ClapTrap::attack(const std::string& target)
 {
+	if (_life <= 0)
+	{
+		std::cout << "ClapTrap " << _name << " is dead" << std::endl;
+		return ;
+	}
 	if (_attack == 0)
 	{
 		std::cout << "ClapTrap " << _name << " can't attack" << std::endl;
@@ -56,12 +66,7 @@ void ClapTrap::attack(const std::string& target)
 	}
 	if (_energy == 0)
 	{
-		std::cout << "ClapTrap " << _name << "no energy left" << std::endl;
-		return ;
-	}
-	if (_life <= 0)
-	{
-		std::cout << "ClapTrap " << _name << "is dead" << std::endl;
+		std::cout << "ClapTrap " << _name << " no energy left" << std::endl;
 		return ;
 	}
 	std::cout << "ClapTrap " << _name << " attacks " << target << ", causing "
@@ -79,7 +84,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 	}
 	if (_life <= 0)
 	{
-		std::cout << _name << "is already dead" << std::endl;
+		std::cout << _name << " is already dead" << std::endl;
 		return ;	
 	}
 	std::cout << _name << " take " << amount << " of damage" << std::endl;
@@ -90,12 +95,12 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (_energy == 0)
 	{
-		std::cout << "ClapTrap " << _name << "no energy left" << std::endl;
+		std::cout << _name << " no energy left" << std::endl;
 		return ;
 	}
 	if (_life <= 0)
 	{
-		std::cout << "ClapTrap " << _name << "is dead and can't be repaired" << std::endl;
+		std::cout << _name << " is dead and can't be repaired" << std::endl;
 		return ;
 	}
 	std::cout << _name << " heals " << amount << " HP" << std::endl;

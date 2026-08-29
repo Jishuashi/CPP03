@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 15:50:39 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/29 22:58:42 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/29 23:57:19 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ class ScavTrap : public ClapTrap
 {
 private:
 public:
+	ScavTrap();
 	ScavTrap(std::string pName);
 	~ScavTrap();
 
@@ -25,6 +26,7 @@ public:
 	ScavTrap& operator=(const ScavTrap &pOther);
 
 	void attack(const std::string& target);
+	void guardGate();
 };
 
 #endif

@@ -6,13 +6,16 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 10:41:14 by hchartie          #+#    #+#             */
-/*   Updated: 2026/08/29 23:52:24 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/08/29 23:58:45 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() { }
+ClapTrap::ClapTrap() 
+{
+	std::cout << "ClapTrap <NoName> Default constructor called" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string	pName) : _name(pName) 
 {
@@ -41,7 +44,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &pOther)
 	if (this != &pOther)
 	{
 		_name = pOther._name;
-		std::cout << "ClapTrap " << pOther._name << " assignment operator called" << std::endl;
+		std::cout << "ClapTrap " << pOther._name << " Assignment operator called" << std::endl;
 		_life = pOther._life;
 		_energy = pOther._energy;
 		_attack = pOther._attack;

@@ -11,9 +11,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+ScavTrap::ScavTrap()
+{
+	std::cout << "ScavTrap <NoName> Default constructor called" << std::endl;
+}
+
 ScavTrap::ScavTrap(std::string pName) : ClapTrap(pName)
 {
-	std::cout << "ScavTrap " << _name << " Created by default constructor" << std::endl;
+	std::cout << "ScavTrap " << _name << "  Default constructor called" << std::endl;
 	_life = 100;
 	_energy = 50;
 	_attack = 20;
@@ -26,16 +31,18 @@ ScavTrap::~ScavTrap()
 
 ScavTrap::ScavTrap(const ScavTrap &pToCopy) : ClapTrap(pToCopy)
 {
-	std::cout << "ScavTrap " << _name << " Created by copy constructor" << std::endl;
+	std::cout << "ScavTrap " << _name << " Copy constructor called" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &pOther)
 {
 	if (this != &pOther)
 	{
-			_life = pOther._life;
-			_energy = pOther._energy;
-			_attack = pOther._attack;
+		_name = pOther._name;
+		std::cout << "ScavTrap " << pOther._name << " Assignment operator called" << std::endl;
+		_life = pOther._life;
+		_energy = pOther._energy;
+		_attack = pOther._attack;
 	}
 	return (*this);
 }
@@ -48,13 +55,23 @@ void ScavTrap::attack(const std::string& target)
 		return ;
 	}
 	if (_energy == 0)
-		std::cout << "ScavTrap " << _name << "no energy left" << std::endl;
+		std::cout << "ScavTrap " << _name << " no energy left" << std::endl;
 	if (_life <= 0)
 	{
-		std::cout << "ScavTrap " << _name << "is dead" << std::endl;
+		std::cout << "ScavTrap " << _name << " is dead" << std::endl;
 		return ;
 	}
 	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing "
 		<< _attack << " points of damage!" << std::endl;
 	_energy--;
+}
+
+void ScavTrap::guardGate()
+{
+	if (_life <= 0)
+	{
+		std::cout << "ScavTrap " << _name << " is dead" << std::endl;
+		return ;
+	}
+	std::cout << "ScavTrap " << _name << " is now in Gatekeeper mode" << std::endl;
 }
